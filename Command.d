@@ -41,7 +41,7 @@ unittest
 {
    State s = new ConsoleState();
    Command t = new TCommand(s);
-   assert(t()); 
+   assert(t("foo")); 
 }
 
 
