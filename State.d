@@ -10,12 +10,12 @@ interface State
 
 class ConsoleState: State
 {
-    void sendData(string data)
+    override void sendData(string data)
     {
         writeln(data);
     }
 
-    string getData()
+    override string getData()
     {
         return readln();
     }
