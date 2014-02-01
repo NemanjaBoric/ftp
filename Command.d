@@ -3,12 +3,12 @@ import std.string;
 
 interface Callable
 {
-    bool opCall();
+    bool opCall(string data);
 }
 
 abstract class Command 
 {
-    bool opCall();
+    bool opCall(string data);
 
     this(State s)
     {
@@ -21,7 +21,7 @@ abstract class Command
 
 private class TCommand: Command
 {
-    override bool opCall()
+    override bool opCall(string data)
     {
         state.sendData("Type in \"Hello!\":");
 
